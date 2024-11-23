@@ -9,8 +9,8 @@ export default function HomePage() {
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <div className="space-y-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-[var(--accent-secondary)] mb-4">
-            Astrophotography
+          <h1 className="text-3xl md:text-5xl font-bold text-[var(--accent-secondary)] mb-4">
+            Astrominchu
           </h1>
           <div className="text-[var(--foreground)] leading-relaxed space-y-4">
             <p>
@@ -28,17 +28,6 @@ export default function HomePage() {
               journey worthwhile. Join this adventure of awe and inspiration by following
               AstroMinchu on Instagram and YouTube.
             </p>
-            {/* <div className="mt-6 flex space-x-4">
-              <Link href="/gallery" className="btn-primary px-6 py-2 rounded-md">
-                Band Gallery
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-[var(--accent-secondary)] text-[var(--foreground)] px-6 py-2 rounded-md hover:bg-[var(--accent-primary)] transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div> */}
           </div>
         </div>
 
