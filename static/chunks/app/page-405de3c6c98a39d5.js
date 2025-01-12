@@ -1,0 +1,101 @@
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+	[931],
+	{
+		7353: function (e, a, n) {
+			Promise.resolve().then(n.bind(n, 5381));
+		},
+		5381: function (e, a, n) {
+			"use strict";
+			n.d(a, {
+				default: function () {
+					return s;
+				},
+			});
+			var r = n(7437),
+				t = n(3145);
+			n(7648);
+			var i = n(1365);
+			function s() {
+				return (0, r.jsx)("div", {
+					className: "container mx-auto px-4 py-12",
+					children: (0, r.jsxs)("div", {
+						className: "grid md:grid-cols-2 gap-8 items-center",
+						children: [
+							(0, r.jsxs)("div", {
+								className: "space-y-4",
+								children: [
+									(0, r.jsx)("h1", {
+										className:
+											"text-3xl md:text-5xl font-bold text-[var(--accent-secondary)] mb-4",
+										children: "Astrominchu",
+									}),
+									(0, r.jsxs)("div", {
+										className:
+											"text-[var(--foreground)] leading-relaxed space-y-4",
+										children: [
+											(0, r.jsx)("p", {
+												children:
+													"AstroMinchu, derived from the Kannada word Minchu, which means glittering or lightning, was launched by Jayanth Venkatesh in 2022.",
+											}),
+											(0, r.jsx)("p", {
+												children:
+													"The platform is a celebration of the beauty of our universe, as seen through the lens of astrophotography. AstroMinchu aims to inspire people to marvel at the various astronomical events, galaxies, nebulas, and other wonders that grace our universe.",
+											}),
+											(0, r.jsx)("p", {
+												children:
+													"If you are passionate and can handle challenges, astrophotography can be incredibly rewarding. The results may be more satisfying than you ever imagined, making the journey worthwhile. Join this adventure of awe and inspiration by following AstroMinchu on Instagram and YouTube.",
+											}),
+										],
+									}),
+								],
+							}),
+							(0, r.jsx)("div", {
+								className: "flex justify-center items-center",
+								children: (0, r.jsx)("div", {
+									className:
+										"w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-[var(--accent-primary)]",
+									children: (0, r.jsx)(t.default, {
+										src: i.Z,
+										alt: "Vicious Warfare band members",
+										width: 256,
+										height: 256,
+										className: "object-cover w-full h-full",
+										priority: !0,
+									}),
+								}),
+							}),
+						],
+					}),
+				});
+			}
+		},
+		7648: function (e, a, n) {
+			"use strict";
+			n.d(a, {
+				default: function () {
+					return t.a;
+				},
+			});
+			var r = n(2972),
+				t = n.n(r);
+		},
+		1365: function (e, a) {
+			"use strict";
+			a.Z = {
+				src: "/_next/static/media/logo.c4742794.png",
+				height: 6e3,
+				width: 6e3,
+				blurDataURL:
+					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAwklEQVR42mNglLLmkrMVUrJnkrJmlrYBIgiDgV3WhoHRhIFBl1fejl/BTlDRDiLHwMBt5uAWlpKWx8BgxMCgDySBcqwyNgwMDJot7b3zFixt6+idNn1WV3srA4M6g6glAwODYVNj86b1q9dt2LJ6zbrly5bXNbTLazkzMLBbpqdldra1tHVOKK2or6ptBUqIqzoycAEtZ9BnYFBiYBBkYNBiYFBkYJBnkLBiADoXaJukqoOkmqOwsr2YioOoigOLtA0Aopos5OyauKAAAAAASUVORK5CYII=",
+				blurWidth: 8,
+				blurHeight: 8,
+			};
+		},
+	},
+	function (e) {
+		e.O(0, [972, 145, 971, 117, 744], function () {
+			return e((e.s = 7353));
+		}),
+			(_N_E = e.O());
+	},
+]);
