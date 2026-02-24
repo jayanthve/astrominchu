@@ -4,14 +4,42 @@ import Link from "next/link";
 import appLogo from "./logo.png";
 import Header from "./Header";
 
+import img1 from "../gallery/gallery1.png";
+import img2 from "../gallery/gallery2.png";
+import img3 from "../gallery/gallery3.png";
+import img4 from "../gallery/gallery4.png";
+
 export default function HomePage() {
+  const galleryImages = [
+    {
+      src: img1,
+      alt: "Astro Image 1",
+      category: "Astro Pic 1",
+    },
+    {
+      src: img2,
+      alt: "Astro Image 2",
+      category: "Astro Pic 2",
+    },
+    {
+      src: img3,
+      alt: "Astro Image 3",
+      category: "Astro Pic 3",
+    },
+    {
+      src: img4,
+      alt: "Astro Image 4",
+      category: "Astro Pic 4",
+    },
+  ];
+
   return (
     <>
       <main>
         <section className="bg-gradient-to-br from-bgPrimary via-bgSecondary to-bgOverlay py-24">
           <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="font-heading text-4xl md:text-6xl leading-tight mb-4">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl leading-tight mb-4">
                 Discover the{" "}
                 <span className="text-accentPrimary drop-shadow-[0_0_18px_rgba(255,196,0,0.35)]">
                   Glittering
@@ -78,10 +106,19 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-5">
             <h2 className="font-heading text-2xl mb-6">Featured Captures</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div className="aspect-square bg-[#0b1320] rounded-xl border border-accentPrimary/20 shadow-soft"></div>
-              <div className="aspect-square bg-[#0b1320] rounded-xl border border-accentPrimary/20 shadow-soft"></div>
-              <div className="aspect-square bg-[#0b1320] rounded-xl border border-accentPrimary/20 shadow-soft"></div>
-              <div className="aspect-square bg-[#0b1320] rounded-xl border border-accentPrimary/20 shadow-soft"></div>
+              {galleryImages.map((image, index) => (
+                <div
+                  key={`img-${index}`}
+                  className="group aspect-square rounded-xl border border-accentPrimary/20 relative overflow-hidden"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
             <Link
               href="/gallery"
