@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Facebook, Mail, Home, Users, MessageSquare, Info, Instagram } from "lucide-react";
+import {
+  Facebook,
+  Mail,
+  Home,
+  Users,
+  MessageSquare,
+  Info,
+  Instagram,
+} from "lucide-react";
 
 export default function Footer() {
   const socialLinks = [
@@ -34,7 +42,7 @@ export default function Footer() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-zinc-400 hover:text-purple-500 transition-colors text-sm"
+                className="text-zinc-400 hover:text-yellow-500 transition-colors text-sm"
               >
                 {link.name}
               </Link>
@@ -53,7 +61,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.aria}
-                className="text-zinc-400 hover:text-purple-500 transition-colors duration-300"
+                className="text-zinc-400 hover:text-yellow-500 transition-colors duration-300"
               >
                 <social.icon size={20} />
               </a>
@@ -67,7 +75,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()}{" "}
             <Link
               href="https://www.astrominchu.com"
-              className="text-zinc-500 hover:text-purple-500 transition-colors font-bold"
+              className="text-zinc-500 hover:text-yellow-500 transition-colors font-bold"
             >
               AstroMinchu
             </Link>{" "}
