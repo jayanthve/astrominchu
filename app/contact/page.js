@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, User, MessageCircle, Send, CheckCircle2, AlertTriangle } from "lucide-react";
+import {
+  Mail,
+  User,
+  MessageCircle,
+  Send,
+  CheckCircle2,
+  AlertTriangle,
+} from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -81,8 +88,8 @@ export default function Contact() {
             Contact Astrominchu
           </h1>
           <p className="text-gray-300">
-            AstroMinchu is happy to assist with any questions, concerns, or inquiries you may have
-            about us.
+            AstroMinchu is happy to assist with any questions, concerns, or
+            inquiries you may have about us.
           </p>
         </div>
 
@@ -103,7 +110,6 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <div className="flex items-center mb-2">
-              <User className="mr-2 text-[#60A5FA]" />
               <label className="text-gray-200">Name</label>
             </div>
             <input
@@ -119,12 +125,13 @@ export default function Contact() {
                     : "border border-[#2a3c61] focus:ring-[#60A5FA]"
                 } placeholder-gray-400`}
             />
-            {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+            )}
           </div>
 
           <div>
             <div className="flex items-center mb-2">
-              <Mail className="mr-2 text-[#60A5FA]" />
               <label className="text-gray-200">Email</label>
             </div>
             <input
@@ -140,12 +147,13 @@ export default function Contact() {
                     : "border border-[#2a3c61] focus:ring-[#60A5FA]"
                 } placeholder-gray-400`}
             />
-            {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+            )}
           </div>
 
           <div>
             <div className="flex items-center mb-2">
-              <MessageCircle className="mr-2 text-[#60A5FA]" />
               <label className="text-gray-200">Message</label>
             </div>
             <textarea
@@ -160,7 +168,9 @@ export default function Contact() {
                     : "border border-[#2a3c61] focus:ring-[#60A5FA]"
                 } placeholder-gray-400`}
             ></textarea>
-            {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+            )}
           </div>
 
           <button

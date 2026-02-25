@@ -12,43 +12,41 @@ export default function Header() {
   const isActive = (path) => pathname === path;
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/gallery", label: "Gallery" },
+    { href: "/#gallery", label: "Gallery" },
+    { href: "/#about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 
   return (
-    <header className="bg-[var(--background)] sticky top-0 z-50 shadow-2xl border-b border-[var(--accent-primary)]">
-      <nav className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center">
-          {/* Logo with Next.js Image component */}
-          <Link href="/" className="flex items-center space-x-3">
-            <Image
-              src={appLogo}
-              alt="Vicious Warfare Logo"
-              width={50}
-              height={50}
-              className="rounded-full border-2 border-[var(--accent-secondary)]"
-            />
-            <span className="font-bold text-xl tracking-wider uppercase hidden sm:block text-[var(--foreground)]">
-              AstroMinchu
-            </span>
-          </Link>
-
+    <header className="sticky top-0 z-10 backdrop-blur bg-bgPrimary/80 border-b border-white/10 relative">
+      <div className="max-w-6xl mx-auto px-5 flex items-center justify-between min-h-[64px]">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src={appLogo}
+            alt="AstroMinchu Logo"
+            width={48}
+            height={48}
+            className="rounded-full border-2 border-accentPrimary"
+            priority
+          />
+          <span className="hidden sm:block font-heading font-bold tracking-wide uppercase">
+            ASTROMINCHU
+          </span>
+        </Link>
+        <nav className="space-x-4 text-textSecondary">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`
-                  uppercase tracking-wider text-sm
-                  transition-all duration-300 ease-in-out
-                  hover:text-[var(--accent-secondary)]
+                  transition-all duration-200
                   ${
                     isActive(link.href)
-                      ? "text-[var(--accent-secondary)] font-bold"
-                      : "text-[var(--foreground)]"
+                      ? "text-textPrimary font-bold"
+                      : "text-textSecondary hover:text-textPrimary"
                   }
                 `}
               >
@@ -57,52 +55,55 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md hover:bg-[var(--accent-primary)] transition"
+            className="md:hidden p-2 rounded-md hover:bg-white/10 transition"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle mobile menu"
           >
             <svg
-              className="w-6 h-6 text-[var(--foreground)]"
+              className="w-6 h-6 text-textPrimary"
               fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+              <path
+                d={
+                  isMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
             </svg>
           </button>
-        </div>
+        </nav>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-[var(--background)] shadow-lg">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`
-                  block px-4 py-3 
-                  border-b border-[var(--accent-primary)]
-                  uppercase tracking-wider
-                  transition-colors duration-300
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="sticky top-0 w-full md:hidden backdrop-blur bg-bgPrimary/80 border-t border-white/10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`
+                  block px-4 py-3 text-center text-sm border-b border-white/10 transition
                   ${
                     isActive(link.href)
-                      ? "text-[var(--accent-secondary)] bg-[var(--accent-primary)]"
-                      : "text-[var(--foreground)] hover:bg-[var(--accent-primary)]"
+                      ? "text-textPrimary font-bold bg-white/5"
+                      : "text-textSecondary hover:text-textPrimary hover:bg-white/5"
                   }
                 `}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
-      </nav>
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

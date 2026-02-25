@@ -1,9 +1,21 @@
-import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
+import { Inter, Space_Grotesk } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -15,13 +27,16 @@ export const metadata = {
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
+  verification: {
+    google: "kb4gHuxEK1VmOoH-ru2fI1hlLpA8Bz8bWTyMBdnSDIs",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body>
+        <div class="bg-bgPrimary text-textPrimary font-body leading-relaxed">
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
