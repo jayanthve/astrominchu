@@ -70,7 +70,25 @@ export default function HomePage() {
           </div>
           <div className="bg-white/5 p-4 rounded-xl2 shadow-soft">
             <div className="bg-black rounded-xl aspect-video grid place-items-center text-textSecondary">
-              Featured Astrophotography Preview
+              <Image
+                src={appLogo}
+                alt="AstroMinchu Logo"
+                width={200}
+                height={200}
+                sizes="
+    (max-width: 360px) 160px,
+    (max-width: 480px) 170px,
+    (max-width: 640px) 180px,
+    (max-width: 768px) 190px,
+    (max-width: 1024px) 200px,
+    200px
+  "
+                className="rounded-full border-2 border-accentPrimary w-full w-[160px]
+    sm:w-[170px]
+    md:w-[180px]
+    lg:w-[200px]
+    h-auto max-w-[200px] h-auto"
+              />
             </div>
           </div>
         </div>
@@ -154,9 +172,16 @@ export default function HomePage() {
                     Instagram
                   </button>
                 </a>
-                <button className="px-5 py-2 rounded-full border border-accentPrimary text-accentPrimary font-semibold">
-                  YouTube
-                </button>
+                <a
+                  href="https://www.youtube.com/@AstroMinchu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow on YouTube"
+                >
+                  <button className="px-5 py-2 rounded-full border border-accentPrimary text-accentPrimary font-semibold">
+                    YouTube
+                  </button>
+                </a>
               </div>
             </div>
             <div className="bg-bgSecondary rounded-xl2 p-6 border border-white/10 shadow-soft">
@@ -169,7 +194,10 @@ export default function HomePage() {
                   placeholder="Your email"
                   className="flex-1 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-textPrimary placeholder:text-textSecondary outline-none"
                 />
-                <button className="px-4 py-2 rounded-full bg-accentPrimary text-bgPrimary font-semibold">
+                <button
+                  disabled
+                  className="px-4 py-2 rounded-full bg-accentPrimary text-bgPrimary font-semibold"
+                >
                   Notify me
                 </button>
               </div>
