@@ -12,8 +12,8 @@ export default function Header() {
   const isActive = (path) => pathname === path;
 
   const navLinks = [
-    { href: "/#gallery", label: "Gallery" },
-    { href: "/#about", label: "About" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 

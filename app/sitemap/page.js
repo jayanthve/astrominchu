@@ -4,13 +4,16 @@ export default function Sitemap() {
   const sitemapData = [
     { name: "Home", path: "/" },
     { name: "Gallery", path: "/gallery" },
+    { name: "About", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
 
   return (
     <div className="bg-gray-900 min-h-screen text-gray-100 font-sans">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8">Astrominchu Sitemap</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">
+          Astrominchu Sitemap
+        </h1>
         <div className="max-w-md mx-auto space-y-4">
           {sitemapData.map((item, index) => (
             <Link

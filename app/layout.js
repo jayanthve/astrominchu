@@ -36,9 +36,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
-        <div class="bg-bgPrimary text-textPrimary font-body leading-relaxed">
+        <div className="bg-bgPrimary text-textPrimary font-body leading-relaxed min-h-dvh flex flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-1 flex flex-col">{children}</main>
           <Footer />
         </div>
       </body>
