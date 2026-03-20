@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Facebook,
   Mail,
@@ -72,8 +73,34 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="text-center border-t border-zinc-800 pt-4"></div>
       </div>
-      <div className="max-w-6xl mx-auto px-5">
-        © 2022–Present AstroMinchu · Capturing the Glittering Universe
+      <div className="container mx-auto px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="flex justify-center md:justify-start space-x-2 items-center">
+            <Image
+              src="/rhLogo.png"
+              alt="Redhood AI Logo"
+              width={90}
+              height={100}
+              className="h-8 w-auto"
+            />
+            <p>
+              Powered by&nbsp;
+              <span>
+                <a
+                  href="https://redhood.ai/website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-yellow-500 transition-colors font-bold"
+                >
+                  redhood.ai
+                </a>
+              </span>
+            </p>
+          </div>
+          <p className="text-center md:text-end">
+            © 2022–Present AstroMinchu · Capturing the Glittering Universe
+          </p>
+        </div>
       </div>
     </footer>
   );
@@ -119,12 +146,12 @@ function PreviousFooter() {
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center border-t border-zinc-800 pt-4">
-          <p className="text-zinc-500 text-sm">
+        <div className="border-t border-zinc-800 text-zinc-500 pt-4">
+          <p className="text-sm">
             &copy; {new Date().getFullYear()}{" "}
             <Link
               href="https://www.astrominchu.com"
-              className="text-zinc-500 hover:text-yellow-500 transition-colors font-bold"
+              className="hover:text-yellow-500 transition-colors font-bold"
             >
               AstroMinchu
             </Link>{" "}
