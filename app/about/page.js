@@ -7,10 +7,7 @@ export default function About() {
       <div className="w-full flex justify-center px-5 ">
         <div>
           <h1 className="font-heading font-bold text-4xl md:text-5xl leading-tight mb-8 text-center">
-            About{" "}
-            <span className="text-accentPrimary drop-shadow-[0_0_18px_rgba(255,196,0,0.35)]">
-              AstroMinchu
-            </span>{" "}
+            About <span className="text-accentPrimary">AstroMinchu</span>{" "}
           </h1>
           <div className="text-textSecondary text-justify max-w-2xl space-y-8">
             <p>

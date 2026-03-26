@@ -40,10 +40,7 @@ export default function HomePage() {
           <div>
             <h1 className="font-heading font-bold text-4xl md:text-5xl leading-tight mb-4">
               Discover the{" "}
-              <span className="text-accentPrimary drop-shadow-[0_0_18px_rgba(255,196,0,0.35)]">
-                Glittering
-              </span>{" "}
-              Universe
+              <span className="text-accentPrimary">Glittering</span> Universe
             </h1>
             <p className="text-textSecondary max-w-xl">
               AstroMinchu captures galaxies, nebulas, and cosmic events through

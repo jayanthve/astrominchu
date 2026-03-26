@@ -97,9 +97,7 @@ export default function Footer() {
               </span>
             </p>
           </div>
-          <p className="text-center md:text-end">
-            © 2022–Present AstroMinchu · Capturing the Glittering Universe
-          </p>
+          <p className="text-center md:text-end">© 2026 AstroMinchu</p>
         </div>
       </div>
     </footer>
